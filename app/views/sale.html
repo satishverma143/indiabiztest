@@ -1,0 +1,117 @@
+<!-- Inner-Banner -->
+<section id="listing_banner" class="parallex-bg">
+	<div class="container">
+    	<div class="white-text text-center div_zindex">
+        	<div class="search_form">
+            	<form action="#" method="get">
+                <div class="form-group">
+                    <div class="select">
+                        <select class="form-control">
+                	    	<option>What are you looking for?</option>
+            	            <option>Real Estate</option>
+                            <option>Restaurant</option>
+                            <option>Real Estate</option>
+        	                <option>Health & Fitness</option>
+    	                    <option>Beauty & Spas</option>
+                            <option>Hotels & Travel</option>
+                            <option>Automotive</option>
+	                    </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Locaton">
+                </div>
+                <div class="btn_group">
+                    <input type="submit" value="Search" class="btn btn-block">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="dark-overlay"></div>
+</section>
+<!-- /Inner-Banner -->
+
+<!-- Listings -->
+<section id="inner_pages">
+	<div class="container">
+    	<div class="listing_header">
+        	<h5>Businesses for Sale</h5>
+          <div class="layout-switcher">
+            <a class="hand" ng-click="vm.changeGridView(true)" class="active" tooltip-placement="top" uib-tooltip="Grid View"><i class="fa fa-th"></i></a>
+            <a class="hand" ng-click="vm.changeGridView(false)" tooltip-placement="top" uib-tooltip="List View"><i class="fa fa-align-justify"></i></a>
+          </div>
+        </div>
+
+    	<div class="row" ng-if="vm.gridView">
+        <div class="col-md-4 grid_view show_listing" ng-repeat="item in vm.gridViewData">
+          <div class="listing_wrap">
+            <div class="listing_img">
+              <span class="like_post"><i class="fa fa-bookmark-o"></i></span>
+              <div class="listing_cate">
+                <span class="listing_like"><a href="#"><i class="fa fa-heart-o"></i></a></span>
+              </div>
+              <a href="#"><img ng-src="{{item.image}}" alt="image"></a>
+            </div>
+            <div class="listing_info">
+              <div class="post_category">
+                <a href="#">{{item.tag}}</a>
+                <span class=" pull-right"><i class="fa fa-inr"></i> 50 Lakh - 1 Cr.</span>
+              </div>
+              <h4><a href="#">{{item.title}}</a></h4>
+              <p>{{item.description}}</p>
+              <div class="listing_review_info">
+                <p><span class="review_score">4.0/5</span>
+                  <i class="fa fa-star active"></i> <i class="fa fa-star active"></i> <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i> <i class="fa fa-star"></i>
+                  (5 Reviews) </p>
+                  <p class="listing_map_m"><i class="fa fa-map-marker"></i> Los Angeles</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="listview" ng-if="!vm.gridView">
+        <div class="listview show_listing" ng-repeat="item in vm.gridViewData">
+          <div class="listing_wrap">
+            <div class="listing_img">
+              <span class="like_post"><i class="fa fa-bookmark-o"></i></span>
+              <div class="listing_cate">
+                <span class="listing_like"><a href="#"><i class="fa fa-heart-o"></i></a></span>
+              </div>
+              <a href="#"><img ng-src="{{item.image}}" alt="image"></a>
+            </div>
+            <div class="listing_info">
+              <div class="post_category">
+                <a href="#">{{item.tag}}</a>
+                <span class=" pull-right"><i class="fa fa-inr"></i> 50 Lakh - 1 Cr.</span>
+              </div>
+              <h4><a href="#">{{item.title}}</a></h4>
+              <p>{{item.description}}</p>
+              <div class="listing_review_info">
+                <p><span class="review_score">4.0/5</span>
+                  <i class="fa fa-star active"></i> <i class="fa fa-star active"></i> <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i> <i class="fa fa-star"></i>
+                  (5 Reviews) </p>
+                  <p class="listing_map_m"><i class="fa fa-map-marker"></i> Los Angeles</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+        <nav class="pagination_nav">
+          <ul class="pagination">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2 </a></li>
+            <li><a href="#">3 </a></li>
+            <li><a href="#">4 </a></li>
+            <li><a href="#">5 </a></li>
+            <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+          </ul>
+        </nav>
+    </div>
+</section>
+<!-- /Listings -->
